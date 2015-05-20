@@ -1,7 +1,7 @@
 # Ember-cli-surge
 
 ## Static Web Publishing for Front-End Developers
-[surge.sh] (http://surge.sh/) Zero-bullshit, single–command,
+[surge.sh](http://surge.sh) Zero-bullshit, single–command,
 bring your own source control web publishing CDN. Yes, it's free.
 
 ## Installation

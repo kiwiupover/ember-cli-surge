@@ -27,7 +27,7 @@ ember surge
 ```
 
 This command will build your ember app using the production environment.
-Then it will deploy your app using from the `dist` folder
+Then deploy that code from your `dist` folder
 to the url `<your-project-name>.surge.sh`
 
 ## Contributing

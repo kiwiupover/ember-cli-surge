@@ -1,9 +1,8 @@
 {
   "name": "ember-cli-surge",
   "version": "1.0.0",
-  "description": "the ember addon to use surge.sh for deployments.",
+  "description": "the EmebrJS addon to use surge.sh for deployments.",
   "directories": {
-    "doc": "doc",
     "test": "tests"
   },
   "scripts": {
@@ -15,7 +14,8 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "repository": "https://github.com/kiwiupover/ember-cli-surge",
+  "author": "David Laird",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.2",

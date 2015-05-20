@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-surge",
-  "version": "0.0.1",
-  "description": "the ember addon to use surge for deployments.",
+  "version": "1.0.0",
+  "description": "the ember addon to use surge.sh for deployments.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -9,7 +9,7 @@
   "scripts": {
     "start": "ember server",
     "build": "ember build",
-    "test": "ember try:testall"
+    "test": "node tests/runner.js"
   },
   "repository": "",
   "engines": {
@@ -19,6 +19,7 @@
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.2",
+    "chai": "^2.3.0",
     "ember-cli": "0.2.3",
     "ember-cli-app-version": "0.3.3",
     "ember-cli-content-security-policy": "0.4.0",
@@ -32,14 +33,18 @@
     "ember-disable-prototype-extensions": "^1.0.0",
     "ember-export-application-global": "^1.0.2",
     "ember-try": "0.0.4",
-    "surge": "^0.12.0"
+    "glob": "^5.0.6",
+    "mocha": "^2.2.5"
   },
   "keywords": [
     "ember-addon",
-    "surge"
+    "surge",
+    "surge.sh"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.0.0"
+    "ember-cli-babel": "^5.0.0",
+    "rsvp": "~3.0.9",
+    "surge": "^0.12.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

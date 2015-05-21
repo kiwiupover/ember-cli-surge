@@ -10,17 +10,16 @@
     "build": "ember build",
     "test": "node tests/runner.js"
   },
-  "repository": "",
+  "repository": "https://github.com/kiwiupover/ember-cli-surge",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "repository": "https://github.com/kiwiupover/ember-cli-surge",
   "author": "David Laird",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.2",
     "chai": "^2.3.0",
-    "ember-cli": "0.2.3",
+    "ember-cli": "0.2.5",
     "ember-cli-app-version": "0.3.3",
     "ember-cli-content-security-policy": "0.4.0",
     "ember-cli-dependency-checker": "0.0.8",

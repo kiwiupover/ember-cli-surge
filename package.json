@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-surge",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "the EmebrJS addon to use surge.sh for deployments.",
   "directories": {
     "test": "tests"

@@ -39,6 +39,7 @@ describe('surge command', function() {
     };
 
     project = {
+      root: 'surge-app',
       isEmberCLIProject: function(){
         return true;
       }
@@ -53,9 +54,14 @@ describe('surge command', function() {
       environment: { },
       tasks: tasks,
       settings: {},
+
+      cnameFile: function(){
+        return 'surge-app.surge.sh';
+      },
+
       runCommand: function(command, args) {
         assert.include(command, 'surge/lib/cli.js');
-        assert.deepEqual(args, ["--project", "dist", "--domain", "ember-cli-surge.surge.sh"]);
+        assert.deepEqual(args, ["--project", "dist", "--domain", "surge-app.surge.sh"]);
       }
     }).validateAndRun(['-d my-site.com']);
   });
@@ -68,6 +74,11 @@ describe('surge command', function() {
       environment: { },
       tasks: tasks,
       settings: {},
+
+      cnameFile: function(){
+        return 'surge-app.surge.sh';
+      },
+
       runCommand: function(command, args) {
         assert.include(command, 'surge/lib/cli.js');
       }
@@ -82,6 +93,11 @@ describe('surge command', function() {
       environment: { },
       tasks: tasks,
       settings: {},
+
+      cnameFile: function(){
+        return 'surge-app.surge.sh';
+      },
+
       runCommand: function(command, args) {
         assert(buildTaskCalled,
             'expected build task to be called');

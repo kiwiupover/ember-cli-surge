@@ -1,4 +1,6 @@
 # Ember-cli-surge
+[![Build Status](https://travis-ci.org/kiwiupover/ember-cli-surge.svg)](https://travis-ci.org/kiwiupover/ember-cli-surge)
+[![Ember Observer Score](http://emberobserver.com/badges/ember-cli-surge.svg)](http://emberobserver.com/addons/ember-cli-surge)
 
 ## Static Web Publishing for Front-End Developers
 [surge.sh](http://surge.sh) Zero-bullshit, single–command,
@@ -37,6 +39,11 @@ to the url `<your-project-name>.surge.sh`
 The domain name that your project builds can update in the `CNAME` file.
 Make sure your domain is `<something>.surge.sh`.
 For more info look at the [Surge Docs](http://surge.sh/help/remembering-a-domain)
+
+## Hash location
+
+I recommend using the `hash` [location](http://emberjs.com/api/classes/Ember.Location.html#toc_hashlocation)
+for your urls because surge.sh is setup for static sites will try and load a file for `kiwiupover.com/file`.
 
 ## Contributing
 

@@ -18,6 +18,7 @@ describe('surge command', function() {
   var CommandUnderTest;
   var buildTaskCalled;
   var buildTaskReceivedProject;
+  var copyTaskCalled;
 
   before(function() {
     CommandUnderTest = Command.extend(DivshotCommandBase);
@@ -25,6 +26,7 @@ describe('surge command', function() {
 
   beforeEach(function() {
     buildTaskCalled = false;
+    copyTaskCalled = false;
     ui = new MockUI();
     analytics = new MockAnalytics();
     tasks = {
@@ -55,8 +57,13 @@ describe('surge command', function() {
       tasks: tasks,
       settings: {},
 
-      cnameFile: function(){
+      cnameFile: function() {
         return 'surge-app.surge.sh';
+      },
+
+      copyIndex: function() {
+        copyTaskCalled = true;
+        return true;
       },
 
       runCommand: function(command, args) {
@@ -75,8 +82,13 @@ describe('surge command', function() {
       tasks: tasks,
       settings: {},
 
-      cnameFile: function(){
+      cnameFile: function() {
         return 'surge-app.surge.sh';
+      },
+
+      copyIndex: function() {
+        copyTaskCalled = true;
+        return true;
       },
 
       runCommand: function(command, args) {
@@ -94,8 +106,13 @@ describe('surge command', function() {
       tasks: tasks,
       settings: {},
 
-      cnameFile: function(){
+      cnameFile: function() {
         return 'surge-app.surge.sh';
+      },
+
+      copyIndex: function() {
+        copyTaskCalled = true;
+        return true;
       },
 
       runCommand: function(command, args) {
@@ -103,6 +120,8 @@ describe('surge command', function() {
             'expected build task to be called');
         assert(buildTaskReceivedProject,
             'expected build task to receive project');
+        assert(copyTaskCalled,
+            'expected copy task to be called');
       }
     }).validateAndRun();
   });

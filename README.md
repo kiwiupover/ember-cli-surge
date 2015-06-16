@@ -40,10 +40,6 @@ The domain name that your project builds can update in the `CNAME` file.
 Make sure your domain is `<something>.surge.sh`.
 For more info look at the [Surge Docs](http://surge.sh/help/remembering-a-domain)
 
-## Hash location
-
-I recommend using the `hash` [location](http://emberjs.com/api/classes/Ember.Location.html#toc_hashlocation)
-for your urls because surge.sh is setup for static sites will try and load a file for `kiwiupover.com/file`.
 
 ## Contributing
 

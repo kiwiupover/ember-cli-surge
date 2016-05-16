@@ -24,7 +24,7 @@ Otherwise, for ember-cli 0.1.5 - 0.2.3, run:
 ember install:addon  ember-cli-surge
 ```
 
-## Deploy
+## Deployment
 
 ```sh
 ember surge
@@ -39,6 +39,17 @@ to the url `<your-project-name>.surge.sh`
 The domain name that your project builds can update in the `CNAME` file.
 Make sure your domain is `<something>.surge.sh`.
 For more info look at the [Surge Docs](http://surge.sh/help/remembering-a-domain)
+
+Other commands
+`ember surge --login` Login to your account at Surge (surge.sh)
+  aliases: -l
+`ember surge --whoami` Check who you are logged in as.
+  aliases: -w
+`ember surge --publish` (String)` Publishes a project to the web using Surge.
+  aliases: -p
+`ember surge --list` (String)` List all the projects you’ve published on Surge (surge.sh)
+  aliases: -ls
+`ember surge --logout` (String)` Log out of your account at Surge (surge.sh)
 
 
 ## Contributing

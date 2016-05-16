@@ -34,22 +34,22 @@ This command will build your ember app using the production environment.
 Then deploy that code from your `dist` folder
 to the url `<your-project-name>.surge.sh`
 
-## Updating the Domain Name
+### Updating the Domain Name
 
 The domain name that your project builds can update in the `CNAME` file.
 Make sure your domain is `<something>.surge.sh`.
 For more info look at the [Surge Docs](http://surge.sh/help/remembering-a-domain)
 
-Other commands
-- `ember surge --login` Login to your account at Surge (surge.sh)
-      - aliases: `-l`
+### Other commands
+- `ember surge --login` Login to your account at Surge (surge.sh).
+    - alias: `-l`
 - `ember surge --whoami` Check who you are logged in as.
-      - aliases: `-w`
-- `ember surge --publish` (String)` Publishes a project to the web using Surge.
-      - aliases: `-p`
-- `ember surge --list` (String)` List all the projects you’ve published on Surge (surge.sh)
-      - aliases: `-ls`
-- `ember surge --logout` (String)` Log out of your account at Surge (surge.sh)
+    - alias: `-w`
+- `ember surge --publish` Publishes a project to the web using Surge (surge.sh).
+    - alias: `-p`
+- `ember surge --list` List all the projects you’ve published on Surge (surge.sh).
+    - alias: `-ls`
+- `ember surge --logout` Log out of your account at Surge (surge.sh).
 
 
 ## Contributing

@@ -41,15 +41,15 @@ Make sure your domain is `<something>.surge.sh`.
 For more info look at the [Surge Docs](http://surge.sh/help/remembering-a-domain)
 
 Other commands
-`ember surge --login` Login to your account at Surge (surge.sh)
-  aliases: -l
-`ember surge --whoami` Check who you are logged in as.
-  aliases: -w
-`ember surge --publish` (String)` Publishes a project to the web using Surge.
-  aliases: -p
-`ember surge --list` (String)` List all the projects you’ve published on Surge (surge.sh)
-  aliases: -ls
-`ember surge --logout` (String)` Log out of your account at Surge (surge.sh)
+- `ember surge --login` Login to your account at Surge (surge.sh)
+      - aliases: `-l`
+- `ember surge --whoami` Check who you are logged in as.
+      - aliases: `-w`
+- `ember surge --publish` (String)` Publishes a project to the web using Surge.
+      - aliases: `-p`
+- `ember surge --list` (String)` List all the projects you’ve published on Surge (surge.sh)
+      - aliases: `-ls`
+- `ember surge --logout` (String)` Log out of your account at Surge (surge.sh)
 
 
 ## Contributing

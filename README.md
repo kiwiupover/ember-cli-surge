@@ -53,11 +53,12 @@ Other commands
 
 
 ## Contributing
+We would love ot hear your feedback and welcome your PRs.
+Cheers.
 
 ### Running Tests
 
 * `npm test`
 
 ## License
-
 MIT

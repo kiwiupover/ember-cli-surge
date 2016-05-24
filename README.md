@@ -34,6 +34,8 @@ This command will build your ember app using the production environment.
 Then deploy that code from your `dist` folder
 to the url `<your-project-name>.surge.sh`
 
+Passing `ember surge --environment development` to deploy you development environment.
+
 ### Updating the Domain Name
 
 The domain name that your project builds can update in the `CNAME` file.
@@ -61,4 +63,4 @@ Cheers.
 * `npm test`
 
 ## License
-MIT
+This software is distributed under the MIT license.

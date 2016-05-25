@@ -136,7 +136,7 @@ describe('Surge commands', function() {
     });
   });
 
-  var surgeCommands = ['login', 'logout', 'whoami', 'list'];
+  var surgeCommands = ['login', 'logout', 'whoami', 'list', 'token'];
 
   surgeCommands.forEach(function(surgeCommand){
     it('Can execute ' + surgeCommand + ' surge command', function(done) {

@@ -34,7 +34,7 @@ This command will build your ember app using the production environment.
 Then deploy that code from your `dist` folder
 to the url `<your-project-name>.surge.sh`
 
-Passing `ember surge --environment development` to deploy you development environment.
+Using the environment flag `ember surge --environment development` to deploy your development environment.
 
 ### Updating the Domain Name
 
@@ -51,6 +51,8 @@ For more info look at the [Surge Docs](http://surge.sh/help/remembering-a-domain
     - alias: `-p`
 - `ember surge --list` List all the projects you’ve published on Surge (surge.sh).
     - alias: `-ls`
+- `ember surge --token` Get surge.sh authentication token, great for Continuous Integration (CI).
+    - alias: `-t`
 - `ember surge --logout` Log out of your account at Surge (surge.sh).
 
 

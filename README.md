@@ -34,7 +34,7 @@ This command will build your ember app using the production environment.
 Then deploy that code from your `dist` folder
 to the url `<your-project-name>.surge.sh`
 
-Using the environment flag `ember surge --environment development` to deploy your development environment.
+Use the environment flag `ember surge --environment development` to deploy your development environment.
 
 ### Updating the Domain Name
 

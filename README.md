@@ -30,19 +30,20 @@ ember install:addon  ember-cli-surge
 ember surge
 ```
 
-This command will build your ember app using the production environment.
-Then deploy that code from your `dist` folder
-to the url `<your-project-name>.surge.sh`
+The above command will build your ember app using the production environment then deploy that code to the url `<your-project-name>.surge.sh`
 
-Use the environment flag `ember surge --environment development` to deploy your development environment.
+By passing an environment flag `ember surge --environment development` to the ember surge command will use your development environment.
 
 ### Updating the Domain Name
 
-The domain name that your project builds can update in the `CNAME` file.
-Make sure your domain is `<something>.surge.sh`.
-For more info look at the [Surge Docs](http://surge.sh/help/remembering-a-domain)
+The default domain name for your project is the `<your-app-name.surge.sh>`. This can befound in the `CNAME` file at the root of your project.  
+Use `ember generate surge-domain <your-new-domain>` to update the domain which will update the `CNAME` file. Remember the domain name needs to be unique.
+
+For more info check out [Surge Docs](http://surge.sh/help/remembering-a-domain)
 
 ### Other commands
+- `ember surge --new-domain` Surge.sh will provide a unique domain or you can enter your own.
+    - alias: `-d`
 - `ember surge --login` Login to your account at Surge (surge.sh).
     - alias: `-l`
 - `ember surge --whoami` Check who you are logged in as.

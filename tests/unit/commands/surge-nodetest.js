@@ -136,6 +136,21 @@ describe('Surge commands', function() {
     });
   });
 
+  it('Build and deploy with out passing a domain', function(done){
+    var args = [];
+
+    tasks.Build.prototype.run;
+
+    command.validateAndRun(['ember', 'surge', '--new-domain']).then(function(){
+      surgeCommand = command.runCommand.calledWith[0][0];
+      expectedArgs = command.runCommand.calledWith[0][1];
+
+      expect(surgeCommand).to.equal('publish');
+      expect(expectedArgs).to.deep.equal(['--project', 'dist']);
+      done();
+    });
+  });
+
   var surgeCommands = ['login', 'logout', 'whoami', 'list', 'token'];
 
   surgeCommands.forEach(function(surgeCommand){

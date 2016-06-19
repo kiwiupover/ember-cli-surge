@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-surge",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "the EmberJS addon to use surge.sh for deployments.",
   "directories": {
     "test": "tests"
@@ -46,6 +46,7 @@
   ],
   "dependencies": {
     "ember-cli-babel": "^5.0.0",
+    "lodash": "^4.13.1",
     "rsvp": "~3.0.9",
     "surge": "~0.18.0"
   },

@@ -37,7 +37,7 @@
     "ember-try": "^0.2.2",
     "glob": "^7.0.4",
     "loader.js": "^4.0.1",
-    "mocha": "^2.2.5"
+    "mocha": "^3.0.0"
   },
   "keywords": [
     "ember-addon",

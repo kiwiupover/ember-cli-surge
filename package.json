@@ -8,7 +8,8 @@
   "scripts": {
     "start": "ember server",
     "build": "ember build",
-    "test": "node tests/runner.js"
+    "test": "node tests/runner.js",
+    "publish:patch": "npm version patch && git push origin --tags && npm publish"
   },
   "repository": "https://github.com/kiwiupover/ember-cli-surge",
   "engines": {

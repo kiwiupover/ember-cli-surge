@@ -1,15 +1,14 @@
 'use strict';
 
 var expect         = require('chai').expect;
-var stub           = require('ember-cli/tests/helpers/stub');
 var MockProject    = require('ember-cli/tests/helpers/mock-project');
 var Promise        = require('ember-cli/lib/ext/promise');
 var Task           = require('ember-cli/lib/models/task');
 var BuildCommand   = require('ember-cli/lib/commands/build');
 var Surge          = require('surge');
 
+var stub           = require('../../helpers/stub');
 var commandOptions = require('../../factories/command-options');
-
 var SurgeCommand   = require('../../../lib/commands/surge');
 
 var surge = new Surge;

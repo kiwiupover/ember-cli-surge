@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-surge",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "description": "the EmberJS addon to use surge.sh for deployments.",
   "directories": {
     "test": "tests"
@@ -27,7 +27,7 @@
     "ember-cli-htmlbars": "^1.0.3",
     "ember-cli-htmlbars-inline-precompile": "^0.3.1",
     "ember-cli-inject-live-reload": "^1.4.0",
-    "ember-cli-jshint": "^2.0.0",
+    "ember-cli-jshint": "^2.0.1",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^1.2.0",
     "ember-data": "^2.5.0",

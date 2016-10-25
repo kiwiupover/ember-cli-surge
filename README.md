@@ -43,18 +43,20 @@ Use `ember generate surge-domain <your-new-domain>` to update the domain which w
 For more info check out [Surge Docs](http://surge.sh/help/remembering-a-domain)
 
 ### Other commands
-- `ember surge --new-domain` Surge.sh will provide a unique domain or you can enter your own.
+- `ember surge --new-domain` Add your own domain name ie: `--new-domain="kiwis-are-great.surge.sh"` or (surge.sh) will generate a domain when no argumentment is passed in ie:`--new-domain`
     - alias: `-d`
 - `ember surge --login` Login to your account at Surge (surge.sh).
     - alias: `-l`
 - `ember surge --whoami` Check who you are logged in as.
     - alias: `-w`
-- `ember surge --publish` Publishes a project to the web using Surge (surge.sh).
+- `ember surge --publish` (Default: true) Publishes a project to the web using Surge (surge.sh).
     - alias: `-p`
 - `ember surge --list` List all the projects you’ve published on Surge (surge.sh).
     - alias: `-ls`
 - `ember surge --token` Get surge.sh authentication token, great for Continuous Integration (CI).
     - alias: `-t`
+- `ember surge --environment` (Default: production) The ember env you want deployed default (production).
+    - alias: `-e`
 - `ember surge --logout` Log out of your account at Surge (surge.sh).
 
 

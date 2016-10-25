@@ -150,6 +150,21 @@ describe('Surge commands', function() {
     });
   });
 
+  it('Build and deploy to the user provided domain', function(done){
+    var args = [];
+
+    tasks.Build.prototype.run;
+
+    command.validateAndRun(['ember', 'surge', '--new-domain=daves-domain.surge.sh']).then(function(){
+      surgeCommand = command.runCommand.calledWith[0][0];
+      expectedArgs = command.runCommand.calledWith[0][1];
+
+      expect(surgeCommand).to.equal('publish');
+      expect(expectedArgs).to.deep.equal(['--project', 'dist', '--domain', 'daves-domain.surge.sh']);
+      done();
+    });
+  });
+
   var surgeCommands = ['login', 'logout', 'whoami', 'list', 'token'];
 
   surgeCommands.forEach(function(surgeCommand){

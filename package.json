@@ -13,7 +13,7 @@
   },
   "repository": "https://github.com/kiwiupover/ember-cli-surge",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 4"
   },
   "author": "David Laird",
   "license": "MIT",

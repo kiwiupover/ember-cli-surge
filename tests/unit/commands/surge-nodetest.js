@@ -87,7 +87,6 @@ describe('Surge commands', function() {
       expect(args).to.deep.equal([ '--project', 'dist', '--domain', 'surge-app.surge.sh' ]);
       done();
     });
-
   });
 
   it('Builds and deploys with `ember surge --publish`', function(done){
@@ -100,6 +99,18 @@ describe('Surge commands', function() {
 
       expect(surgeCommand).to.equal('publish');
       expect(expectedArgs).to.deep.equal(['--project', 'dist', '--domain', 'surge-app.surge.sh']);
+      done();
+    });
+  });
+
+  it('Teardown a published project with `ember surge --teardown`', function(done){
+    tasks.Build.prototype.run;
+    var args = [];
+
+    command.validateAndRun(['ember', 'surge', '--teardown']).then(function(){
+      surgeCommand = command.runCommand.calledWith[0][0];
+
+      expect(surgeCommand).to.equal('teardown');
       done();
     });
   });
@@ -165,7 +176,7 @@ describe('Surge commands', function() {
     });
   });
 
-  var surgeCommands = ['login', 'logout', 'whoami', 'list', 'token'];
+  var surgeCommands = ['login', 'logout', 'whoami', 'list', 'token', 'teardown'];
 
   surgeCommands.forEach(function(surgeCommand){
     it('Can execute ' + surgeCommand + ' surge command', function(done) {

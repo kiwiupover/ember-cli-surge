@@ -58,10 +58,11 @@ For more info check out [Surge Docs](http://surge.sh/help/remembering-a-domain)
 - `ember surge --environment` (Default: production) The ember env you want deployed default (production).
     - alias: `-e`
 - `ember surge --logout` Log out of your account at Surge (surge.sh).
-
+- `ember surge --teardown` Tear down a published project.
+    - alias: `-td`
 
 ## Contributing
-We would love ot hear your feedback and welcome your PRs.
+We would love to hear your feedback and welcome your PRs.
 Cheers.
 
 ### Running Tests

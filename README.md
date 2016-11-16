@@ -3,6 +3,7 @@
 [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-surge.svg)](http://emberobserver.com/addons/ember-cli-surge)
 [![Code Climate](https://codeclimate.com/github/kiwiupover/ember-cli-surge/badges/gpa.svg)](https://codeclimate.com/github/kiwiupover/ember-cli-surge)
 [![npm version](https://badge.fury.io/js/ember-cli-surge.svg)](https://badge.fury.io/js/ember-cli-surge)
+https://david-dm.org/kiwiupover/ember-cli-surge.svg
 
 ## Static Web Publishing for Front-End Developers
 [surge.sh](http://surge.sh) Zero-bullshit, single–command,

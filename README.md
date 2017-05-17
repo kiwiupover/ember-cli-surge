@@ -1,4 +1,6 @@
 # Ember-cli-surge
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/kiwiupover/ember-cli-surge.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/kiwiupover/ember-cli-surge.svg)](https://travis-ci.org/kiwiupover/ember-cli-surge)
 [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-surge.svg)](http://emberobserver.com/addons/ember-cli-surge)
 [![Code Climate](https://codeclimate.com/github/kiwiupover/ember-cli-surge/badges/gpa.svg)](https://codeclimate.com/github/kiwiupover/ember-cli-surge)

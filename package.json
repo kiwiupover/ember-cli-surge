@@ -47,7 +47,7 @@
     "surge.sh"
   ],
   "dependencies": {
-    "console-ui": "^1.0.3",
+    "console-ui": "^2.0.0",
     "ember-cli-babel": "^6.1.0",
     "lodash": "^4.13.1",
     "rsvp": "~3.6.0",

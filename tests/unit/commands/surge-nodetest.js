@@ -1,29 +1,24 @@
 'use strict';
 
-var expect         = require('chai').expect;
-var MockProject    = require('ember-cli/tests/helpers/mock-project');
-var Promise        = require('ember-cli/lib/ext/promise');
-var Task           = require('ember-cli/lib/models/task');
-var BuildCommand   = require('ember-cli/lib/commands/build');
-var Surge          = require('surge');
+const expect         = require('chai').expect;
+const Promise        = require('ember-cli/lib/ext/promise');
+const Task           = require('ember-cli/lib/models/task');
+const helperStub     = require('../../helpers/stub');
+const commandOptions = require('../../factories/command-options');
+const SurgeCommand   = require('../../../lib/commands/surge');
 
-var stub           = require('../../helpers/stub');
-var commandOptions = require('../../factories/command-options');
-var SurgeCommand   = require('../../../lib/commands/surge');
-
-var surge = new Surge;
-
-var safeRestore = stub.safeRestore;
-stub = stub.stub;
+const safeRestore    = helperStub.safeRestore;
+const stub           = helperStub.stub;
 
 describe('Surge commands', function() {
-  var tasks, options, command, project;
-  var buildRun;
-  var cNameCalled;
-  var buildTaskCalled;
-  var copyTaskCalled;
-  var surgeCommand;
-  var expectedArgs;
+  let tasks;
+  let options;
+  let command;
+  let cNameCalled;
+  let surgeCommand;
+  let expectedArgs;
+  let copyTaskCalled;
+  let buildTaskCalled;
 
   beforeEach(function() {
     tasks = {
@@ -33,13 +28,6 @@ describe('Surge commands', function() {
           return Promise.resolve();
         }
       })
-    };
-
-    project = {
-      root: 'surge-app',
-      isEmberCLIProject: function(){
-        return true;
-      }
     };
 
     options = commandOptions({
@@ -67,7 +55,7 @@ describe('Surge commands', function() {
     safeRestore(command, 'triggerBuild');
   });
 
-  it('#triggerBuild', function(done){
+  it('#triggerBuild', function(done) {
     command.triggerBuild(options);
     tasks.Build.prototype.run();
 
@@ -75,25 +63,24 @@ describe('Surge commands', function() {
     done();
   });
 
-  it('#buildAndPublish', function(done){
-    var args = [];
+  it('#buildAndPublish', function(done) {
+    let args = [];
 
     tasks.Build.prototype.run();
 
-    command.buildAndPublish(options, args).then(function(){
+    command.buildAndPublish(options, args).then(function() {
       expect(cNameCalled).to.equal(true, 'read cName file');
       expect(copyTaskCalled).to.equal(true, 'copied index file');
       expect(buildTaskCalled).to.equal(true, 'expected build to be calledWith');
-      expect(args).to.deep.equal([ '--project', 'dist', '--domain', 'surge-app.surge.sh' ]);
+      expect(args).to.deep.equal(['--project', 'dist', '--domain', 'surge-app.surge.sh']);
       done();
     });
   });
 
-  it('Builds and deploys with `ember surge --publish`', function(done){
+  it('Builds and deploys with `ember surge --publish`', function(done) {
     tasks.Build.prototype.run;
-    var args = [];
 
-    command.validateAndRun(['ember', 'surge', '--publish']).then(function(){
+    command.validateAndRun(['ember', 'surge', '--publish']).then(function() {
       surgeCommand = command.runCommand.calledWith[0][0];
       expectedArgs = command.runCommand.calledWith[0][1];
 
@@ -103,11 +90,10 @@ describe('Surge commands', function() {
     });
   });
 
-  it('Teardown a published project with `ember surge --teardown`', function(done){
+  it('Teardown a published project with `ember surge --teardown`', function(done) {
     tasks.Build.prototype.run;
-    var args = [];
 
-    command.validateAndRun(['ember', 'surge', '--teardown']).then(function(){
+    command.validateAndRun(['ember', 'surge', '--teardown']).then(function() {
       surgeCommand = command.runCommand.calledWith[0][0];
 
       expect(surgeCommand).to.equal('teardown');
@@ -115,10 +101,10 @@ describe('Surge commands', function() {
     });
   });
 
-  it('Builds and deploys with `ember surge`', function(done){
+  it('Builds and deploys with `ember surge`', function(done) {
     tasks.Build.prototype.run;
 
-    command.validateAndRun(['ember', 'surge']).then(function(){
+    command.validateAndRun(['ember', 'surge']).then(function() {
       surgeCommand = command.runCommand.calledWith[0][0];
       expectedArgs = command.runCommand.calledWith[0][1];
 
@@ -128,13 +114,12 @@ describe('Surge commands', function() {
     });
   });
 
-  it('Build and deploy development', function(done){
-    var triggerBuildArgs;
-    var args = [];
+  it('Build and deploy development', function(done) {
+    let triggerBuildArgs;
 
     tasks.Build.prototype.run;
 
-    command.validateAndRun(['ember', 'surge', '--environment', 'development']).then(function(){
+    command.validateAndRun(['ember', 'surge', '--environment', 'development']).then(function() {
       triggerBuildArgs = command.triggerBuild.calledWith[0][0];
       surgeCommand = command.runCommand.calledWith[0][0];
       expectedArgs = command.runCommand.calledWith[0][1];
@@ -146,12 +131,11 @@ describe('Surge commands', function() {
     });
   });
 
-  it('Build and deploy with out passing a domain', function(done){
-    var args = [];
+  it('Build and deploy with out passing a domain', function(done) {
 
     tasks.Build.prototype.run;
 
-    command.validateAndRun(['ember', 'surge', '--new-domain']).then(function(){
+    command.validateAndRun(['ember', 'surge', '--new-domain']).then(function() {
       surgeCommand = command.runCommand.calledWith[0][0];
       expectedArgs = command.runCommand.calledWith[0][1];
 
@@ -161,12 +145,11 @@ describe('Surge commands', function() {
     });
   });
 
-  it('Build and deploy to the user provided domain', function(done){
-    var args = [];
+  it('Build and deploy to the user provided domain', function(done) {
 
     tasks.Build.prototype.run;
 
-    command.validateAndRun(['ember', 'surge', '--new-domain=daves-domain.surge.sh']).then(function(){
+    command.validateAndRun(['ember', 'surge', '--new-domain=daves-domain.surge.sh']).then(function() {
       surgeCommand = command.runCommand.calledWith[0][0];
       expectedArgs = command.runCommand.calledWith[0][1];
 
@@ -176,16 +159,15 @@ describe('Surge commands', function() {
     });
   });
 
-  var surgeCommands = ['login', 'logout', 'whoami', 'list', 'token', 'teardown'];
+  let surgeCommands = ['login', 'logout', 'whoami', 'list', 'token', 'teardown'];
 
-  surgeCommands.forEach(function(surgeCommand){
+  surgeCommands.forEach(function(surgeCommand) {
     it('Can execute ' + surgeCommand + ' surge command', function(done) {
-      command.validateAndRun(['ember', 'surge', '--' + surgeCommand]).then(function(){
+      command.validateAndRun(['ember', 'surge', '--' + surgeCommand]).then(function() {
         expectedArgs = command.runCommand.calledWith[0][0];
         expect(expectedArgs).to.equal(surgeCommand);
         done();
       });
     });
   });
-
 });

@@ -2,7 +2,7 @@
 
 module.exports = {
   stub: function stub(obj, name, value, shouldInvoke) {
-    var original = obj[name];
+    let original = obj[name];
 
     obj[name] = function() {
       obj[name].called++;
@@ -33,7 +33,7 @@ module.exports = {
     };
   },
   safeRestore: function(obj, name) {
-    var value = obj[name];
+    let value = obj[name];
     if (value && value._restore) {
       value._restore();
     }

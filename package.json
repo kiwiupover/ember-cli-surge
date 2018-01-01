@@ -37,7 +37,7 @@
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
     "ember-resolver": "^4.1.0",
-    "ember-source": "~2.17.0",
+    "ember-source": "~2.18.0",
     "eslint": "^4.3.0",
     "eslint-config-sane": "^0.2.1",
     "eslint-plugin-mocha": "^4.11.0",

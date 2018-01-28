@@ -39,7 +39,7 @@
     "ember-resolver": "^4.1.0",
     "ember-source": "~2.18.0",
     "eslint": "^4.3.0",
-    "eslint-config-sane": "^0.2.1",
+    "eslint-config-sane": "^0.3.0",
     "eslint-plugin-mocha": "^4.11.0",
     "glob": "^7.0.4",
     "loader.js": "^4.2.3",

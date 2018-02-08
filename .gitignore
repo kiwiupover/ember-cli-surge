@@ -9,6 +9,8 @@
 /node_modules/
 
 # misc
+/.env*
+/.pnp*
 /.sass-cache
 /connect.lock
 /coverage/
@@ -21,3 +23,4 @@ testem.log
 .node_modules.ember-try/
 bower.json.ember-try
 package.json.ember-try
+

@@ -2,6 +2,7 @@
 
 const Promise        = require('rsvp');
 const expect         = require('chai').expect;
+const Promise        = require('rsvp');
 const Task           = require('ember-cli/lib/models/task');
 const helperStub     = require('../../helpers/stub');
 const commandOptions = require('../../factories/command-options');

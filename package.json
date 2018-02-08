@@ -60,7 +60,7 @@
     "console-ui": "^2.0.0",
     "ember-cli-babel": "^6.7.1",
     "lodash": "^4.13.1",
-    "rsvp": "~4.7.0",
+    "rsvp": "~4.8.0",
     "surge": "~0.19.0"
   },
   "ember-addon": {

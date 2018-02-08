@@ -6,7 +6,7 @@ const MockAnalytics = require('ember-cli/tests/helpers/mock-analytics');
 const MockProject   = require('ember-cli/tests/helpers/mock-project');
 
 function createProject() {
-  const project = new MockProject();
+  let project = new MockProject();
   project.isEmberCLIProject = function() {
     return true;
   };

@@ -1,4 +1,3 @@
-
 module.exports = {
   root: true,
   parserOptions: {
@@ -16,4 +15,4 @@ module.exports = {
   rules: {
     'mocha/no-exclusive-tests': 'error'
   }
-}
+};

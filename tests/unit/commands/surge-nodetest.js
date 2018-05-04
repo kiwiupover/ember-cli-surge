@@ -1,7 +1,7 @@
 'use strict';
 
+const Promise        = require('rsvp');
 const expect         = require('chai').expect;
-const Promise        = require('ember-cli/lib/ext/promise');
 const Task           = require('ember-cli/lib/models/task');
 const helperStub     = require('../../helpers/stub');
 const commandOptions = require('../../factories/command-options');
@@ -23,7 +23,7 @@ describe('Surge commands', function() {
   beforeEach(function() {
     tasks = {
       Build: Task.extend({
-        run: function() {
+        run() {
           buildTaskCalled = true;
           return Promise.resolve();
         }
@@ -31,17 +31,17 @@ describe('Surge commands', function() {
     };
 
     options = commandOptions({
-      cnameFile: function() {
+      cnameFile() {
         cNameCalled = true;
         return 'surge-app.surge.sh';
       },
 
-      copyIndex: function() {
+      copyIndex() {
         copyTaskCalled = true;
         return true;
       },
 
-      tasks: tasks
+      tasks
     });
 
     command = new SurgeCommand(options);

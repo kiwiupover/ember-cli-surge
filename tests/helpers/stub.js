@@ -20,7 +20,7 @@ module.exports = {
   },
   stubPath: function stubPath(path) {
     return {
-      basename: function() {
+      basename() {
         return path;
       }
     };
@@ -28,11 +28,11 @@ module.exports = {
   stubBlueprint: function stubBlueprint() {
     return function Blueprint() {
       return {
-        install: function() { }
+        install() { }
       };
     };
   },
-  safeRestore: function(obj, name) {
+  safeRestore(obj, name) {
     let value = obj[name];
     if (value && value._restore) {
       value._restore();

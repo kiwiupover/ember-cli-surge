@@ -39,7 +39,9 @@ The above command will build your ember app using the production environment the
 
 By passing an environment flag `ember surge --environment development` to the ember surge command will use your development environment.
 
-### Updating the Domain Name
+* `ember test` – Runs the test suite on the current Ember version
+* `ember test --server` – Runs the test suite in "watch mode"
+* `npm test` – Runs `ember try:each` to test your addon against multiple Ember versions
 
 The default domain name for your project is the `<your-app-name.surge.sh>`. This can befound in the `CNAME` file at the root of your project.  
 Use `ember generate surge-domain <your-new-domain>` to update the domain which will update the `CNAME` file. Remember the domain name needs to be unique.

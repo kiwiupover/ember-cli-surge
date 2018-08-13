@@ -23,7 +23,7 @@
   "author": "David Laird",
   "license": "MIT",
   "devDependencies": {
-    "broccoli-asset-rev": "^2.4.5",
+    "broccoli-asset-rev": "^3.0.0",
     "chai": "^4.1.0",
     "ember-cli": "~3.1.3",
     "ember-cli-app-version": "^3.0.0",

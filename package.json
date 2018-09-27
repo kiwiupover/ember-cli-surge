@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-surge",
-  "version": "1.3.0-beta.2",
+  "version": "1.3.0",
   "description": "the EmberJS addon to use surge.sh for deployments.",
   "scripts": {
     "lint:hbs": "ember-template-lint .",

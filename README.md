@@ -65,5 +65,8 @@ Cheers.
 
 * `yarn test`
 
+* `npm run lint:js`
+* `npm run lint:js -- --fix`
+
 ## License
 This software is distributed under the MIT license.

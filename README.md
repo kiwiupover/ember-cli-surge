@@ -33,13 +33,13 @@ The above command will build your ember app using the production environment the
 
 By passing an environment flag `ember surge --environment development` to the ember surge command will use your development environment.
 
-The default domain name for your project is the `<your-app-name.surge.sh>`. This can befound in the `CNAME` file at the root of your project.  
+The default domain name for your project is the `<your-app-name.surge.sh>`. This can be found in the `CNAME` file at the root of your project.  
 Use `ember generate surge-domain <your-new-domain>` to update the domain which will update the `CNAME` file. Remember the domain name needs to be unique.
 
 For more info check out [Surge Docs](http://surge.sh/help/remembering-a-domain)
 
 ### Other commands
-- `ember surge --new-domain` Add your own domain name ie: `--new-domain="kiwis-are-great.surge.sh"` or (surge.sh) will generate a domain when no argumentment is passed in ie:`--new-domain`
+- `ember surge --new-domain` Add your own domain name ie: `--new-domain="kiwis-are-great.surge.sh"` or (surge.sh) will generate a domain when no argument is passed in ie:`--new-domain`
     - alias: `-d`
 - `ember surge --login` Login to your account at Surge (surge.sh).
     - alias: `-l`

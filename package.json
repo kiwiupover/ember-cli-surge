@@ -62,7 +62,7 @@
     "test": "tests"
   },
   "dependencies": {
-    "console-ui": "^2.0.0",
+    "console-ui": "^3.0.0",
     "ember-cli-babel": "^6.16.0",
     "lodash": "^4.13.1",
     "rsvp": "~4.8.0",

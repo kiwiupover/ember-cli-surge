@@ -2898,9 +2898,10 @@ escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
-eslint-config-sane@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-sane/-/eslint-config-sane-0.6.0.tgz#157650c8012168803613fb82243d932e900de06b"
+eslint-config-sane@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-sane/-/eslint-config-sane-0.7.0.tgz#dbe1a05951e58c0d7b4366e518b349fda79f7d24"
+  integrity sha512-NmjBDEk6W/Mtmk69/cAwyS+hLNrFEWmBeop5PejP5Iw8DZhcTYPdxutxLSzEEPQM/1GiZmaWaKdrfWYfHcI3og==
 
 eslint-plugin-ember@^5.2.0:
   version "5.2.0"

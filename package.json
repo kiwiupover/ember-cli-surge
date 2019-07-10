@@ -15,7 +15,7 @@
     "lint:fix": "yarn lint -- --fix"
   },
   "engines": {
-    "node": "8.* || >= 10.*"
+    "node": "8.* || 10.* || >= 12.*"
   },
   "devDependencies": {
     "@ember/optional-features": "^0.7.0",

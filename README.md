@@ -14,11 +14,6 @@ bring your own source control web publishing CDN. Yes, it's free.
 
 
 ## Installation
-
-From within your Ember CLI application run:
-
-For ember-cli >= 0.2.3, run:
-
 ```sh
 ember install ember-cli-surge
 ```
@@ -33,7 +28,7 @@ The above command will build your ember app using the production environment the
 
 By passing an environment flag `ember surge --environment development` to the ember surge command will use your development environment.
 
-The default domain name for your project is the `<your-app-name.surge.sh>`. This can be found in the `CNAME` file at the root of your project.  
+The default domain name for your project is the `<your-app-name.surge.sh>`. This can be found in the `CNAME` file at the root of your project.
 Use `ember generate surge-domain <your-new-domain>` to update the domain which will update the `CNAME` file. Remember the domain name needs to be unique.
 
 For more info check out [Surge Docs](http://surge.sh/help/remembering-a-domain)

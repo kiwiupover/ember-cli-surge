@@ -3,7 +3,7 @@
 const path = require('path');
 
 module.exports = {
-  name: 'ember-cli-surge',
+  name: require('./package').name
 
   includedCommands: function() {
     return {

@@ -64,7 +64,7 @@
   },
   "dependencies": {
     "console-ui": "^3.1.1",
-    "ember-cli-babel": "^7.7.3",
+    "ember-cli-babel": "^7.17.0",
     "lodash": "^4.17.15",
     "rsvp": "~4.8.5",
     "surge": "~0.21.3"

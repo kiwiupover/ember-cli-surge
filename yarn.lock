@@ -3496,10 +3496,10 @@ ember-source-channel-url@^2.0.1:
   dependencies:
     got "^8.0.1"
 
-ember-source@~3.11.1:
-  version "3.11.1"
-  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-3.11.1.tgz#2318fbe600c88d3a8abbf56fc2f3a61645ee42d8"
-  integrity sha512-FPHHHu/5FBbKQ3o1D2HXEIniBUVqG1N4vDB66BaP0ht2ZcO6EB3HMjGxVH8Ad3Of8QOcXtZrBfXDHZdIWLW4lQ==
+ember-source@~3.12.0:
+  version "3.12.3"
+  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-3.12.3.tgz#112462b8c1dfa124c0d021ca7eeeb04b5a5488ca"
+  integrity sha512-uzyoOVg1ygTY/InjwP0sgIkHiMiRylDauMY9K+vM15WkmmfrMaetklxxnqWThvsL4onBRRW8MKCj+q41Ra/NQQ==
   dependencies:
     broccoli-funnel "^2.0.2"
     broccoli-merge-trees "^3.0.2"
@@ -3514,7 +3514,7 @@ ember-source@~3.11.1:
     ember-router-generator "^1.2.3"
     inflection "^1.12.0"
     jquery "^3.4.1"
-    resolve "^1.10.1"
+    resolve "^1.11.1"
 
 ember-template-lint@^1.1.0:
   version "1.3.0"
@@ -6886,10 +6886,10 @@ query-string@^5.0.1:
     object-assign "^4.1.0"
     strict-uri-encode "^1.0.0"
 
-quibble@^0.5.6:
-  version "0.5.6"
-  resolved "https://registry.yarnpkg.com/quibble/-/quibble-0.5.6.tgz#f692fcf22dc8da832b212cde9b11fe88296bd582"
-  integrity sha512-nAqsl6RxhWK36grfglqEXC0ihA3Q+DaCKeqJti/uz8CpiE92590hx3TRob+z89udYqj3PoUpQvjW77T1IR70mw==
+quibble@^0.6.3:
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/quibble/-/quibble-0.6.3.tgz#750617218feeb8e3ac7af4d01a7675b8c7a4fca6"
+  integrity sha512-gIOnJ0y7nJk9sWOHwTzqh2M4llaIDBzEOcMdvBd5rIrNTGyOTb44CDJWc85OFEFpkxsnjru2g36LhL0gu7d5ng==
   dependencies:
     lodash "^4.17.14"
     resolve "^1.11.1"
@@ -7997,13 +7997,13 @@ terser@^3.17.0:
     source-map "~0.6.1"
     source-map-support "~0.5.10"
 
-testdouble@^3.12.2:
-  version "3.12.2"
-  resolved "https://registry.yarnpkg.com/testdouble/-/testdouble-3.12.2.tgz#a70c11cc83f1396a91f120cf8d0a3037aeb83f37"
-  integrity sha512-+K1+JZZZUYFkeiIbNWDUVpyTrtYzNLHc8nRXADCvQ70913DA/xGgRkE+mWEbyZQTBRH5c5aVR4YjXvCY4hnT3w==
+testdouble@^3.15.0:
+  version "3.15.0"
+  resolved "https://registry.yarnpkg.com/testdouble/-/testdouble-3.15.0.tgz#4670d24307d276c950bcac9d6de58fc8d69937eb"
+  integrity sha512-ua9j1mi7sFsvAa0kWt4vJ52Ld8QwxcxSMlQo7LLVdZ7lynem7BsPYYHK/12ck9g3/Yf2xEIQJv6fTiqVv8xouQ==
   dependencies:
-    lodash "^4.17.14"
-    quibble "^0.5.6"
+    lodash "^4.17.15"
+    quibble "^0.6.3"
     stringify-object-es5 "^2.5.0"
     theredoc "^1.0.0"
 
